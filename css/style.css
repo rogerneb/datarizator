@@ -2,8 +2,14 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+/*Invisble class*/
+.invisible {
+  display: none;
+}
+
 .choose_field {
   display: flex;
+  align-items: center;
 }
 
 .choose_field div {

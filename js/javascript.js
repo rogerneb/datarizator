@@ -1,9 +1,43 @@
 $(document).ready(function(){
+  for (n=2; n<=12; n++){
+    content =
+    "<div id=choose_field_"+n+" class=choose_field>"+
+    "<input type=checkbox id=activate_field_"+n+" name=activate_field_1 value=activate_field_"+n+" onchange=ischecked("+n+");>"+
+      "<label>0"+n+":</label>"+
+      "<select id=select_field_"+n+" name=select_field_"+n+" disabled onchange=FillOptions("+n+");>"+
+        "<option value=none>None</option>"+
+        "<option value=id>ID</option>"+
+        "<option value=name>Name</option>"+
+        "<option value=surname>Surname</option>"+
+        "<option value=company>Company</option>"+
+        "<option value=email>E-Mail</option>"+
+        "<option value=integer>Integer number</option>"+
+        "<option value=float>Float number</option>"+
+        "<option value=currency>Currency</option>"+
+        "<option value=country>Country</option>"+
+        "<option value=city>City</option>"+
+        "</select>"+
+        "<div id=options_field_"+n+"></div></div>";
 
+    document.getElementById('field_'+n).innerHTML = content;
+  }
 })
 
 function addfield(num) {
   console.log("add: "+num);
+}
+
+//Activate the fields
+function ischecked(num) {
+  if (document.getElementById("activate_field_"+num).checked) {
+    console.log(num+" is checked.");
+    document.getElementById("select_field_"+num).disabled = false;
+  }else{
+    console.log(num+" is not checked.");
+    document.getElementById("select_field_"+num).disabled = true;
+    document.getElementById("select_field_"+num).value = "none";
+    document.getElementById("options_field_"+num).innerHTML = "";
+  }
 }
 
 

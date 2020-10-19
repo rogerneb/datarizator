@@ -34,10 +34,12 @@
 		<header></header>
 		<section>
 			<h1>Datarizator</h1>
+			<p>Max 12 fields.</p>
 			<article class="form_article">
 				<form id="data" name="data" action="action.php" method="POST">
-					<div id="field_1" class="choose_field">
-						<div id="choose_field_1">
+					<div id="field_1">
+						<div id="choose_field_1" class="choose_field">
+							<input type="checkbox" id="activate_field_1" name="activate_field_1" value="activate_field_1" onchange="ischecked(1);" checked="checked">
 							<label>01:</label>
 							<select id="select_field_1" name="select_field_1" onchange="FillOptions(1);">
 								<option value="none">None</option>
@@ -52,12 +54,24 @@
 								<option value="country">Country</option>
 								<option value="city">City</option>
 							</select>
+							<div id="options_field_1"></div>
 						</div>
-						<div id="options_field_1"></div>
-						<span class="button" id="add_button_1" onclick="addfield(1);"> + </span>
 					</div>
+					<div id="field_2"></div>
+					<div id="field_3"></div>
+					<div id="field_4"></div>
+					<div id="field_5"></div>
+					<div id="field_6"></div>
+					<div id="field_7"></div>
+					<div id="field_8"></div>
+					<div id="field_9"></div>
+					<div id="field_10"></div>
+					<div id="field_11"></div>
+					<div id="field_12"></div>
+
 					<input type="submit" value="Submit">
 				</form>
+				<button class="button" id="add_button_1" onclick="addfield(1);"> + </button>
 			</article>
 		</section>
 		<footer></footer>
