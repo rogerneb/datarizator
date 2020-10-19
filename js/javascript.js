@@ -2,6 +2,14 @@ $(document).ready(function(){
 
 })
 
+function addfield(num) {
+  console.log("add: "+num);
+}
+
+
+////////////////////////////////////////
+///////////// Fill OPTIONS /////////////
+////////////////////////////////////////
 function FillOptions(num){
   var selected = document.getElementById('select_field_'+num).value; //get the type of field selected in combobox
 
